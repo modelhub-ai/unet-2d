@@ -26,19 +26,21 @@
     "format": ".prototxt",
     "io": {
       "input": {
-        "format": ["image/png", "image/jpg", "image/jpeg"],
-        "dim_limits": [
-          {
-            "min": 1,
-            "max": 4
-          },
-          {
-            "min": 32
-          },
-          {
-            "min": 32
-          }
-        ]
+        "single": {
+          "format": ["image/png", "image/jpg", "image/jpeg"],
+          "dim_limits": [
+            {
+              "min": 1,
+              "max": 4
+            },
+            {
+              "min": 32
+            },
+            {
+              "min": 32
+            }
+          ]
+        }
       },
       "output": [
         {
