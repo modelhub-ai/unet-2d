@@ -1,26 +1,33 @@
 {
-  "id": "-",
+  "id": "7f91e01c-0b61-49d3-98ca-241dcb699802",
   "meta": {
     "name": "unet-2d",
-    "application_area": "-",
-    "task": "-",
-    "task_extended": "-",
-    "data_type": "-",
-    "data_source": "-"
+    "application_area": "cell image segmentation",
+    "task": "cell image segmentation",
+    "task_extended": "cell image segmentation",
+    "data_type": "Image/photo",
+    "data_source": "private"
   },
   "publication": {
-    "title": "-",
-    "source": "-",
+    "title": "U-net: Convolutional networks for biomedical image segmentation",
+    "source": "International Conference on Medical image computing and computer-assisted intervention",
     "year": 2015,
-    "authors": "-",
-    "abstract": "We propose a deep convolutional neural network architecture codenamed Inception that achieves the new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC14). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. By a carefully crafted design, we increased the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular incarnation used in our submission for ILSVRC14 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.",
-    "url": "http://openaccess.thecvf.com/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf",
-    "google_scholar": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17799971764477278135&as_sdt=5",
-    "bibtex": "@INPROCEEDINGS{7298594, author={C. Szegedy and Wei Liu and Yangqing Jia and P. Sermanet and S. Reed and D. Anguelov and D. Erhan and V. Vanhoucke and A. Rabinovich}, booktitle={2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, title={Going deeper with convolutions}, year={2015}, volume={}, number={}, pages={1-9}, keywords={convolution;decision making;feature extraction;Hebbian learning;image classification;neural net architecture;resource allocation;convolutional neural network architecture;resource utilization;architectural decision;Hebbian principle;object classification;object detection;Computer architecture;Convolutional codes;Sparse matrices;Neural networks;Visualization;Object detection;Computer vision}, doi={10.1109/CVPR.2015.7298594}, ISSN={1063-6919}, month={June},}"
+    "authors": "Ronneberger, Olaf, Philipp Fischer, and Thomas Brox",
+    "abstract": " There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net .",
+    "url": "https://arxiv.org/pdf/1505.04597.pdf)和%5bTiramisu%5d(https://arxiv.org/abs/1611.09326.pdf",
+    "google_scholar": "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C22&q=U-Net&btnG=",
+    "bibtex": "@inproceedings{ronneberger2015u,
+  title={U-net: Convolutional networks for biomedical image segmentation},
+  author={Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  booktitle={International Conference on Medical image computing and computer-assisted intervention},
+  pages={234--241},
+  year={2015},
+  organization={Springer}
+}"
   },
   "model": {
-    "description": "22 layers deep network. The main hallmark of this architecture is the improved utilization of the computing resources inside the network. By a carefully crafted design, we increased the depth and width of the network while keeping the computational budget constant.",
-    "provevance": "https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet",
+    "description": "please see the thumbnail.jpg",
+    "provevance": "https://github.com/zhixuhao/unet",
     "architecture": "Convolutional Neural Network (CNN)",
     "learning_type": "Supervised learning",
     "format": ".prototxt",
@@ -44,9 +51,9 @@
       },
       "output": [
         {
-          "name": "probabilities",
-          "type": "label_list",
-          "description": "Probabilities of the 1000 classes in the ImageNet dataset."
+          "name": "segmented image",
+          "type": "numpyarray",
+          "description": "segmented cell membrance contour"
         }
       ]
     }
