@@ -1,5 +1,5 @@
 # Put the license for your model here.
-Model provided by: https://github.com/zhixuhao/unet
+Model developed upon https://github.com/zhixuhao/unet
 
 # Model refers to the code required to run your model in modelhub
 # (preprocessing, postprocessing, inference, etc.) as well as the
@@ -8,7 +8,7 @@ Model provided by: https://github.com/zhixuhao/unet
 
 MIT License
 
-Copyright (c) 2019 zhixuhao
+Copyright (c) 2020 zhongyi zhang
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
